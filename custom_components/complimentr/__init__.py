@@ -11,6 +11,7 @@ from homeassistant.helpers import discovery
 
 from .const import *  # pylint: disable=wildcard-import
 
+VERSION = '0.0.1'
 _LOGGER = logging.getLogger(__name__)
 
   # pylint: disable=unused-argument
