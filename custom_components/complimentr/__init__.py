@@ -11,7 +11,7 @@ from homeassistant.helpers import discovery
 
 from .const import *  # pylint: disable=wildcard-import
 
-VERSION = '0.0.1'
+VERSION = '0.0.2'
 _LOGGER = logging.getLogger(__name__)
 
   # pylint: disable=unused-argument
@@ -45,7 +45,7 @@ async def update_data(hass):
         jsondata = request.json()
         hass.data[DOMAIN_DATA] = jsondata
     except Exception as error:  # pylint: disable=broad-except
-        _LOGGER.error("Could not update data - %s", error)
+        _LOGGER.debug("Could not update data - %s", error)
 
 
 async def check_files(hass):
